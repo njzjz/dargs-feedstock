@@ -24,7 +24,7 @@ requirements:
 
   run:
     - python >=3.7
-    - typeguard
+    - typeguard >=4
     - typing_extensions
 
 test:
