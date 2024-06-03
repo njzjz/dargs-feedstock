@@ -1,5 +1,5 @@
 {% set name = "dargs" %}
-{% set version = "0.4.5" %}
+{% set version = "0.4.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/deepmodeling/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 46ddd9aba01be1c185b693cabee481c8a3d95b2d5f2a4f31d190f12c95fa23f3
+  sha256: 864dfa7a61f483d9a025f1f843afd6e9eefe728fdc9a06f991bcef92f0018bed
 
 build:
   number: 0
