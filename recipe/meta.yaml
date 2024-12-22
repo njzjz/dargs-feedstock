@@ -10,11 +10,13 @@ source:
   sha256: 7dc9a0b213bed71a281997dbf2be6612e988caadc566b4aec1bf253243a22ea0
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
+  entry_points:
+    - dargs = dargs.cli:main
 
 requirements:
   host:
@@ -34,6 +36,7 @@ test:
     - dargs
   commands:
     - python -m pip check dargs
+    - dargs -h
 
 about:
   home: https://github.com/deepmodeling/dargs
