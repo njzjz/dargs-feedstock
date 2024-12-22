@@ -20,17 +20,19 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
+    - setuptools
     - setuptools_scm
 
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - typeguard >=4
     - typing_extensions
 
 test:
   requires:
+    - python {{ python_min }}
     - pip
   imports:
     - dargs
